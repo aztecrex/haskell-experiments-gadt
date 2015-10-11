@@ -19,3 +19,8 @@ safeHead (Cons x _) = x
 -- can be created......sort of.
 -- silly False = Nil
 -- silly True = Cons () Nil
+
+-- not sure how to return a nil from safeTail (or return
+-- non-nill if our return type is empty)
+safeTail :: SafeList a NonEmpty -> SafeList a NonEmpty
+safeTail (Cons _ (Cons x xs)) = Cons x xs
